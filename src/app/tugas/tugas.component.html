@@ -1,0 +1,23 @@
+<!-- <p>
+  tugas works!
+</p> -->
+<label>User Name</label>
+<!-- <input 
+  type="text"
+  class="form-control"
+  (input)="onUpdateServer($event)"> -->
+<input
+type="text"
+class="form-control"
+[(ngModel)]="Username">
+<p>{{ Username }}</p>
+<button 
+  class="btn btn-primary" 
+  [disabled]="Username === ''" 
+  (click)="onReset()">Reset</button>
+<p>{{ serverCreationStatus }}</p>
+
+
+<!-- [disabled] = "username ===" -->
+<!-- disabled Ketika tidak kosong maka button tidak bisa di klik -->
+<!-- Reset untuk hapus -->

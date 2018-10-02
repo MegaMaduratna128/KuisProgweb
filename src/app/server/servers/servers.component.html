@@ -1,0 +1,27 @@
+<!-- <p>
+  servers works!
+</p> -->
+<label>Server Name</label>
+<!-- <input 
+  type="text"
+  class="form-control"
+  (input)="onUpdateServer($event)"> -->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+<button 
+  class="btn btn-primary" 
+  [disabled]="!allowNewServer"
+  (click)="onCreationStatus()">Add Server</button>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<!-- <p *ngIf="serverCreated; else noServer">Server telah dibuat, nama server adalah {{ serverName }} </p>  dimodul diserve -->
+<!-- <ng-template #noServer>
+    <p>No server wa created</p>
+</ng-template> -->
+<p *ngIf="serverCreated">Server telah dibuat, nama server adalah {{ serverName}}</p>
+<app-server *ngFor="let server of servers"></app-server> 
+
+<!-- <app-server></app-server>
+<app-server></app-server> -->
